@@ -5,7 +5,7 @@ interface ExperienceItemProps {
   title: string;
   company: string;
   period: string;
-  description: string;
+  description: () => React.ReactNode;
   technologies: string[];
 }
 
@@ -38,7 +38,7 @@ const ExperienceItem = ({
             <span>{period}</span>
           </div>
         </div>
-        <p className="text-muted-foreground">{description}</p>
+        <p className="text-muted-foreground">{description()}</p>
         <div className="flex flex-wrap gap-2">
           {technologies.map((tech) => (
             <Badge key={tech} variant="secondary" className="rounded-full">
@@ -53,30 +53,77 @@ const ExperienceItem = ({
 
 const Experience = () => {
   const experiences = [
+    
     {
       title: "Senior Full Stack Developer",
-      company: "TechCorp Solutions",
-      period: "2021 - Present",
-      description:
-        "Led the development of enterprise-scale web applications, mentored junior developers, and implemented best practices for code quality and performance optimization.",
-      technologies: ["React", "Node.js", "TypeScript", "AWS", "MongoDB"],
+      company: "Holive Services Inc.",
+      period: "2025 - Present",
+      description: () => (
+        <>
+          Led the development of a SaaS platform with enterprise-scale web technologies at{" "}
+          <a
+            href="https://holiveservices.com.ng"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary underline" // Changed to always underline
+          >
+            Holive Services Inc.
+          </a>
+          , mentored junior developers, and implemented best practices for code quality and performance optimization.
+        </>
+      ),
+      technologies: [
+        "Nextjs",
+        "React",
+        "Tailwind",
+        "Supabase",
+        "PostgreSQL",
+        "Paystact API",
+        "Jest",
+        "GitHub Actions (CI/CD)",
+      ],
     },
     {
       title: "Full Stack Developer",
-      company: "Digital Innovations Inc",
-      period: "2019 - 2021",
-      description:
-        "Developed and maintained multiple client projects, implemented responsive designs, and integrated third-party APIs for enhanced functionality.",
-      technologies: ["React", "Express.js", "PostgreSQL", "Docker", "Redis"],
+      company: "Mihaela Coaching",
+      period: "2024-2025",
+      description: () => (
+        <>
+          Developed and maintained the brand’s website at{" "}
+          <a
+            href="https://mihaelaprundu.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary underline" // Changed to always underline
+          >
+            Mihaela Coaching
+          </a>
+          , implemented responsive designs, and integrated third-party APIs for enhanced functionality.
+        </>
+      ),
+      technologies: ["Nextjs", "React", "Typescript", "Tailwind", "PostgreSQL"],
     },
     {
       title: "Frontend Developer",
-      company: "WebTech Studios",
-      period: "2018 - 2019",
-      description:
-        "Created responsive and interactive user interfaces, collaborated with designers, and optimized application performance.",
-      technologies: ["React", "JavaScript", "SASS", "Webpack", "Jest"],
+      company: "Yemidyn Fashion",
+      period: "2024 - 2025",
+      description: () => (
+        <>
+          Created responsive and interactive user interfaces for an eCommerce platform at{" "}
+          <a
+            href="https://yemidyn.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary underline" // Changed to always underline
+          >
+            Yemidyn Fashion
+          </a>
+          , collaborated with designers, and optimized application performance.
+        </>
+      ),
+      technologies: ["React", "JavaScript", "Material UI", "Jest"],
     },
+    
   ];
 
   return (
