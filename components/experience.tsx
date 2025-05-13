@@ -1,5 +1,10 @@
 import { Badge } from "@/components/ui/badge";
-import { Building2, Calendar } from "lucide-react";
+import { Building2, Calendar, Link as LinkIcon } from "lucide-react";
+
+interface LinkItem {
+  label: string;
+  url: string;
+}
 
 interface ExperienceItemProps {
   title: string;
@@ -7,6 +12,7 @@ interface ExperienceItemProps {
   period: string;
   description: () => React.ReactNode;
   technologies: string[];
+  links?: LinkItem[];
 }
 
 const ExperienceItem = ({
@@ -15,9 +21,10 @@ const ExperienceItem = ({
   period,
   description,
   technologies,
+  links = [],
 }: ExperienceItemProps) => {
   return (
-    <div className="relative pl-8 not-last:pb-12">
+    <div className="relative pl-8 not-last:pb-12 group">
       {/* Timeline line */}
       <div className="absolute left-0 top-2.5 h-full w-[2px] bg-muted group-first:h-[calc(100%-24px)] group-first:top-6">
         <div className="absolute h-3 w-3 -left-[5px] top-0 rounded-full border-2 border-primary bg-background" />
@@ -39,6 +46,28 @@ const ExperienceItem = ({
           </div>
         </div>
         <p className="text-muted-foreground">{description()}</p>
+
+        {/* Divider and Links */}
+        {links.length > 0 && (
+          <> 
+            <div className="border-t border-muted mt-4 mb-2" />
+            <div className="flex flex-wrap gap-4">
+              {links.map(({ label, url }) => (
+                <a
+                  key={url}
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-primary hover:underline"
+                >
+                  <LinkIcon className="size-4" />
+                  <span>{label}</span>
+                </a>
+              ))}
+            </div>
+          </>
+        )}
+
         <div className="flex flex-wrap gap-2">
           {technologies.map((tech) => (
             <Badge key={tech} variant="secondary" className="rounded-full">
@@ -52,23 +81,17 @@ const ExperienceItem = ({
 };
 
 const Experience = () => {
-  const experiences = [
-    
+  const experiences: ExperienceItemProps[] = [
     {
       title: "Senior Full Stack Developer",
       company: "Holive Services Inc.",
       period: "2025 - Present",
       description: () => (
         <>
-          Led the development of a SaaS platform with enterprise-scale web technologies at{" "}
-          <a
-            href="https://holiveservices.com.ng"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary underline" // Changed to always underline
-          >
+          Led the development of a SaaS platform with enterprise-scale web technologies at{' '}
+          
             Holive Services Inc.
-          </a>
+          
           , mentored junior developers, and implemented best practices for code quality and performance optimization.
         </>
       ),
@@ -78,52 +101,49 @@ const Experience = () => {
         "Tailwind",
         "Supabase",
         "PostgreSQL",
-        "Paystact API",
+        "Paystack API",
         "Jest",
         "GitHub Actions (CI/CD)",
+      ],
+      links: [
+        { label: "Live Site", url: "https://holiveservices.com.ng" },
       ],
     },
     {
       title: "Full Stack Developer",
-      company: "Mihaela Coaching",
-      period: "2024-2025",
+      company: "Mihaela Coaching Hub",
+      period: "2024 - 2025",
       description: () => (
         <>
-          Developed and maintained the brand’s website at{" "}
-          <a
-            href="https://mihaelaprundu.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary underline" // Changed to always underline
-          >
-            Mihaela Coaching
-          </a>
+          Developed and maintained the brand’s website at{' '}
+         
+            Mihaela Coaching Hub
           , implemented responsive designs, and integrated third-party APIs for enhanced functionality.
         </>
       ),
       technologies: ["Nextjs", "React", "Typescript", "Tailwind", "PostgreSQL"],
+      links: [
+        { label: "Live Site", url: "https://mihaelaprundu.com" },
+      ],
     },
     {
       title: "Frontend Developer",
       company: "Yemidyn Fashion",
-      period: "2024 - 2025",
+      period: "2023 - 2024",
       description: () => (
         <>
-          Created responsive and interactive user interfaces for an eCommerce platform at{" "}
-          <a
-            href="https://yemidyn.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary underline" // Changed to always underline
-          >
+          Created responsive and interactive user interfaces for an eCommerce platform at{' '}
+          
             Yemidyn Fashion
-          </a>
+        
           , collaborated with designers, and optimized application performance.
         </>
       ),
       technologies: ["React", "JavaScript", "Material UI", "Jest"],
+      links: [
+        { label: "Live Site", url: "https://yemidyn.com" },
+      ],
     },
-    
   ];
 
   return (

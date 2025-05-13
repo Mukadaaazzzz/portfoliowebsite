@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { GithubLogo, XLogo } from "../icons";
+import { GithubLogo, LinkedInLogo } from "../icons";
 import { Logo } from "./logo";
 import { NavMenu } from "./nav-menu";
 import { NavigationSheet } from "./navigation-sheet";
@@ -14,20 +14,32 @@ const Navbar = () => {
         <NavMenu className="hidden md:block" />
 
         <div className="flex items-center gap-2">
-          <Button
-            variant="outline"
-            className="hidden sm:inline-flex rounded-full shadow-none"
-            size="icon"
+          <a
+            href="https://www.linkedin.com/in/mukadaz-taofeeq"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <XLogo />
-          </Button>
-          <Button
-            variant="outline"
-            className="rounded-full shadow-none"
-            size="icon"
+            <Button
+              variant="outline"
+              className="hidden sm:inline-flex rounded-full shadow-none"
+              size="icon"
+            >
+              <LinkedInLogo />
+            </Button>
+          </a>
+          <a
+            href="https://github.com/mukadaaazzzz"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <GithubLogo className="h-5! w-5!" />
-          </Button>
+            <Button
+              variant="outline"
+              className="rounded-full shadow-none"
+              size="icon"
+            >
+              <GithubLogo className="h-5 w-5" />
+            </Button>
+          </a>
 
           {/* Mobile Menu */}
           <div className="md:hidden">

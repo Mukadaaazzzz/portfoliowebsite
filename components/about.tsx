@@ -40,7 +40,7 @@ const About = () => {
   </a>
 
   <a
-    href="/Mukadaz-CV.pdf"
+    href="/TaofeeqMukadaz_Resume.pdf"
     download
   >
     <Button variant="outline" className="rounded-full">

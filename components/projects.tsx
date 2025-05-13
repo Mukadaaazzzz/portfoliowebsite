@@ -80,38 +80,20 @@ const Projects = () => {
     {
       title: "E-Commerce Platform",
       description:
-        "A full-featured e-commerce platform with real-time inventory management, payment processing, and admin dashboard.",
-      image: "/placeholder.svg",
-      technologies: ["Next.js", "TypeScript", "Stripe", "Prisma", "PostgreSQL"],
-      liveUrl: "https://ecommerce-demo.com",
-      githubUrl: "https://github.com/username/ecommerce",
+        "Built Calmpus, a responsive e-commerce platform that allows users to log in, browse products, add items to a cart or wishlist, and proceed through a seamless checkout flow.",
+      image: "/jjjj.png",
+      technologies: ["React", "ChakraUI", "Supabase", "Jest", "PostgreSQL", "GitHub Actions (CI/CD)"],
+      liveUrl: "https://calmpus.netlify.app",
+      githubUrl: "https://github.com/Mukadaaazzzz/Calmpus-",
     },
     {
-      title: "AI Task Manager",
+      title: "AI Health Assistant",
       description:
-        "Smart task management app that uses AI to categorize, prioritize, and suggest optimal task scheduling.",
-      image: "/placeholder.svg",
-      technologies: ["React", "Python", "TensorFlow", "FastAPI", "MongoDB"],
-      liveUrl: "https://ai-taskmanager.com",
-      githubUrl: "https://github.com/username/ai-taskmanager",
-    },
-    {
-      title: "Real-time Chat Application",
-      description:
-        "Feature-rich chat application with real-time messaging, file sharing, and video calls.",
-      image: "/placeholder.svg",
-      technologies: ["React", "Socket.io", "WebRTC", "Node.js", "Redis"],
-      liveUrl: "https://chatapp-demo.com",
-      githubUrl: "https://github.com/username/chat-app",
-    },
-    {
-      title: "AI Image Generator",
-      description:
-        "An AI image generator that uses a model to generate images based on a prompt.",
-      image: "/placeholder.svg",
-      technologies: ["React", "Next.js", "Tailwind CSS", "Shadcn UI"],
-      liveUrl: "https://ai-image-generator.com",
-      githubUrl: "https://github.com/username/ai-image-generator",
+        "Created Medverse24, an AI-powered health assistant that helps patients better understand their symptoms and diagnoses.",
+      image: "/med.png",
+      technologies: ["React", "NodeJs", "ExpressJs", "GeminiAPI", "MaterialUI"],
+      liveUrl: "https://medverseproject.netlify.app",
+      githubUrl: "https://github.com/Mukadaaazzzz/medverseproject",
     },
   ];
 
@@ -126,7 +108,7 @@ const Projects = () => {
             Featured Work
           </h2>
           <p className="text-muted-foreground mt-2 sm:mt-4 text-lg">
-            Showcasing some of my best projects and technical achievements
+            Showcasing some of my projects
           </p>
         </div>
 
