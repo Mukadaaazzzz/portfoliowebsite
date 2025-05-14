@@ -1,6 +1,6 @@
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
-import { LinkedInLogo, DribbleLogo, GithubLogo, XLogo } from "./icons";
+import { LinkedInLogo, GithubLogo, XLogo } from "./icons";
 
 const footerLinks = [
   {
