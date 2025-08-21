@@ -1,8 +1,8 @@
 "use client";
 
-import { Badge } from "@/components/ui/badge";
+
 import { Button } from "@/components/ui/button";
-import { Download, Smartphone, Cpu, Code } from "lucide-react";
+import { Download } from "lucide-react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 

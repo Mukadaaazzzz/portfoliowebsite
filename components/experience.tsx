@@ -168,7 +168,7 @@ const Experience = () => {
           <span className="font-semibold text-blue-600">Mukadaz Labs</span>
           , a consulting firm specializing in IT strategy and digital transformation. 
           Created a modern, performant website with excellent SEO and responsive design 
-          to showcase the company's services and expertise.
+          to showcase the company services and expertise.
         </>
       ),
       technologies: [
@@ -204,7 +204,7 @@ const Experience = () => {
           </h2>
           
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            A timeline of my professional growth and the innovative solutions I've built
+            A timeline of my professional growth and the innovative solutions I have built
           </p>
         </motion.div>
 

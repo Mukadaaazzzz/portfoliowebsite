@@ -2,7 +2,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Download, Github, ExternalLink, Sparkles } from "lucide-react";
+import {  Github, ExternalLink, Sparkles } from "lucide-react";
 import Image from "next/image";
 import { HTMLAttributes, useState } from "react";
 
