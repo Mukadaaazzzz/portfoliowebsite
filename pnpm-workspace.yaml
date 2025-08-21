@@ -1,4 +1,0 @@
-ignoredBuiltDependencies:
-  - '@tsparticles/engine'
-  - react-tsparticles
-  - tsparticles-engine
